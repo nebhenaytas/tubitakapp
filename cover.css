@@ -1,0 +1,60 @@
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-light,
+.btn-light:hover,
+.btn-light:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+.dropdown{
+  display:none
+}
+/*
+ * Base structure
+ */
+
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(224, 32, 32, 0.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #000000;
+  border-bottom-color: #398b96;
+}
+
+div#chartdiv:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px 28px;
+  background: white;
+}
+#chartdiv {
+  position: relative;
+}

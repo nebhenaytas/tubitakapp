@@ -1,0 +1,1794 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="light">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Cover Template</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        #chartdiv {
+    width: 100%;
+    height: 550px;
+  }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+
+    
+<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Cover</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+   
+  <!-- Resources -->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+     
+  am5.ready(function() {
+  
+  // Create root element
+  // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+  var root = am5.Root.new("chartdiv");
+  
+  // Set themes
+  // https://www.amcharts.com/docs/v5/concepts/themes/
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  
+  // Create the map chart
+  // https://www.amcharts.com/docs/v5/charts/map-chart/
+  var chart = root.container.children.push(
+    am5map.MapChart.new(root, {
+      panX: "rotateX",
+      panY: "translateY",
+      minZoomLevel: 0.5,
+      maxZoomLevel: 50,
+      homeZoomLevel: 4.1,
+    homeGeoPoint: { longitude: 30, latitude: 30 },
+      projection: am5map.geoMercator(),
+    })
+  );
+
+
+chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
+
+var zoomControl = chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
+zoomControl.homeButton.set("visible", true);
+
+  chart._settings.zoomLevel = 12
+  chart.zoomToGeoPoint({ longitude: 10, latitude: -88 }, 4.4);
+  
+  // Create main polygon series for countries
+  // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+  var polygonSeries = chart.series.push(
+    am5map.MapPolygonSeries.new(root, {
+      geoJSON: am5geodata_worldLow,
+      exclude: ["AQ"]
+    })
+  );
+  
+  polygonSeries.mapPolygons.template.setAll({
+    fill:am5.color(0xdadada)
+  });
+  
+  
+  // Create point series for markers
+  // https://www.amcharts.com/docs/v5/charts/map-chart/map-point-series/
+  var pointSeries = chart.series.push(am5map.ClusteredPointSeries.new(root, {}));
+  
+  
+  // Set clustered bullet
+  // https://www.amcharts.com/docs/v5/charts/map-chart/clustered-point-series/#Group_bullet
+  pointSeries.set("clusteredBullet", function(root) {
+    var container = am5.Container.new(root, {
+      cursorOverStyle:"pointer"
+    });
+  
+    var circle1 = container.children.push(am5.Circle.new(root, {
+      radius: 8,
+      tooltipY: 0,
+      fill: am5.color(0xff8c00)
+    }));
+  
+    var circle2 = container.children.push(am5.Circle.new(root, {
+      radius: 12,
+      fillOpacity: 0.3,
+      tooltipY: 0,
+      fill: am5.color(0xff8c00)
+    }));
+  
+    var circle3 = container.children.push(am5.Circle.new(root, {
+      radius: 16,
+      fillOpacity: 0.3,
+      tooltipY: 0,
+      fill: am5.color(0xff8c00)
+    }));
+  
+    var label = container.children.push(am5.Label.new(root, {
+      centerX: am5.p50,
+      centerY: am5.p50,
+      fill: am5.color(0xffffff),
+      populateText: true,
+      fontSize: "8",
+      text: "{value}"
+    }));
+  
+    container.events.on("click", function(e) {
+      pointSeries.zoomToCluster(e.target.dataItem);
+    });
+  
+    return am5.Bullet.new(root, {
+      sprite: container
+    });
+  });
+  
+  // Create regular bullets
+  pointSeries.bullets.push(function() {
+    var circle = am5.Circle.new(root, {
+      radius: 6,
+      tooltipY: 0,
+      fill: am5.color(0xff8c00),
+      tooltipText: "{title}"
+    });
+  
+    return am5.Bullet.new(root, {
+      sprite: circle
+    });
+  });
+  
+  
+  // Set data
+
+  var cities = [
+  {
+        "title": "Câmi‘u’l-Kebîr",
+        "longitude": "44.2148671",
+        "latitude": "15.3532314"
+    },
+    {
+        "title": "Eski San‘â Pazarı",
+        "longitude": "44.2155556",
+        "latitude": "15.3544444"
+    },
+    {
+        "title": "Dâru'l İmâre (Hulefâ-yi Râşidîn Dönemi)",
+        "longitude": "44.215",
+        "latitude": "15.3527778"
+    },
+    {
+        "title": "Dâru'l-İmâre (Emevi ve Abbasi Dönemi)",
+        "longitude": "44.2181944",
+        "latitude": "15.3617222"
+    },
+    {
+        "title": "Cebbâne",
+        "longitude": "44.218922",
+        "latitude": "15.3617473"
+    },
+    {
+        "title": "Tâvûs b. Keysân Mescidi",
+        "longitude": "44.212077",
+        "latitude": "15.3541842"
+    },
+    {
+        "title": "Vehb b. Münebbih'in Mescidi",
+        "longitude": "44.21105876",
+        "latitude": "15.34814302"
+    },
+    {
+        "title": "Vehb b. Münebbih'in Evi",
+        "longitude": "44.210815",
+        "latitude": "15.3479449"
+    },
+    {
+        "title": "Hişâm b. Yusuf’un Evi",
+        "longitude": "44.2128059",
+        "latitude": "15.3488583"
+    },
+    {
+        "title": "Ebû Halife Mescidi",
+        "longitude": "44.21105876",
+        "latitude": "15.34814302"
+    },
+    {
+        "title": "Abdürrezzâk es-San‘ânî’nin Evi",
+        "longitude": "44.2677778",
+        "latitude": "15.3208333"
+    },
+    {
+        "title": "Ma‘mer b. Râşid’in Kabri / Huzeyme Mezarlığı",
+        "longitude": "44.2070759",
+        "latitude": "15.3494472"
+    },
+    {
+        "title": "Mescidu'l-Eczem",
+        "longitude": "44.2033779",
+        "latitude": "15.3548521"
+    },
+    {
+        "title": "Gumdân Sarayı",
+        "longitude": "44.2197035",
+        "latitude": "15.3545864"
+    },
+    {
+        "title": "Ferve b. Müseyk Mescidi",
+        "longitude": "44.2183333",
+        "latitude": "15.3633333"
+    },
+    {
+        "title": "Mescidu Haccâc (مسجد الحجاج)",
+        "longitude": "46.2944444",
+        "latitude": "32.1877778"
+    },
+    {
+        "title": "Dâru'l-İmâre (دار الإمارة)",
+        "longitude": "46.29683115",
+        "latitude": "32.18795872"
+    },
+    {
+        "title": "Shatt al-Gharraf",
+        "longitude": "46.08474691",
+        "latitude": "32.15992211"
+    },
+    {
+        "title": "Medrese Şarabiyye (مدرسة شرابية)",
+        "longitude": "46.30844244",
+        "latitude": "32.19097937"
+    },
+    {
+        "title": "Dicle Nehri",
+        "longitude": "46.31494788",
+        "latitude": "32.15538973"
+    },
+    {
+        "title": "Shatt al-Amara",
+        "longitude": "46.22531575",
+        "latitude": "32.55702165"
+    },
+    {
+        "title": "Kubbetu'l Hadra",
+        "longitude": "46.29280793",
+        "latitude": "32.18627721"
+    },
+    {
+        "title": "Wasıt Çarşısı (سوق واسط)",
+        "longitude": "46.29695528",
+        "latitude": "32.18662491"
+    },
+    {
+        "title": "Derb Harrazin (درب الخرازين)",
+        "longitude": "46.29695528",
+        "latitude": "32.18662491"
+    },
+    {
+        "title": "Dimas (Hapishane)",
+        "longitude": "46.29770447",
+        "latitude": "32.19170543"
+    },
+    {
+        "title": "Vasıt Şehir Surları",
+        "longitude": "46.29899269",
+        "latitude": "32.17140434"
+    },
+     {
+        "title": "Hz. Peygamber'in Doğduğu Ev",
+        "longitude": "39.8298221",
+        "latitude": "21.4249048"
+    },
+    {
+        "title": "Hz. Peygamber'in Evi",
+        "longitude": "39.82783248",
+        "latitude": "21.42427544"
+    },
+    {
+        "title": "Kâbe",
+        "longitude": "39.82627755",
+        "latitude": "21.4224779"
+    },
+    {
+        "title": "Rüknülgarbî (Rüknüşşâmî)",
+        "longitude": "39.82615018",
+        "latitude": "21.42247106"
+    },
+    {
+        "title": "Rüknülırâkî",
+        "longitude": "39.82615018",
+        "latitude": "21.42247106"
+    },
+    {
+        "title": "Rüknülhacerülesved",
+        "longitude": "39.82615018",
+        "latitude": "21.42247106"
+    },
+    {
+        "title": "Rüknülyemânî",
+        "longitude": "39.82618013",
+        "latitude": "21.42247106"
+    },
+    {
+        "title": "Hz. Ebubekir'in Evi",
+        "longitude": "39.8238889",
+        "latitude": "21.4194444"
+    },
+    {
+        "title": "Darunnedve (دار الندوة)",
+        "longitude": "39.82512093",
+        "latitude": "21.42477458"
+    },
+    {
+        "title": "Cennetü'l Mualla",
+        "longitude": "39.8280556",
+        "latitude": "21.4333333"
+    },
+    {
+        "title": "Ebu Kubeys Dağı",
+        "longitude": "39.8294444",
+        "latitude": "21.4222222"
+    },
+    {
+        "title": "Sevr Dağı",
+        "longitude": "39.8497564",
+        "latitude": "21.377189"
+    },
+    {
+        "title": "Ebu Talib'in Kabri",
+        "longitude": "39.8284094",
+        "latitude": "21.4373755"
+    },
+    {
+        "title": "Nur Dağı",
+        "longitude": "39.8594444",
+        "latitude": "21.4575"
+    },
+    {
+        "title": "Ebu Süfyan'ın Evi",
+        "longitude": "39.82767482",
+        "latitude": "21.42480284"
+    },
+    {
+        "title": "Daru'l Erkam (دار الأرقم)",
+        "longitude": "39.8276667",
+        "latitude": "21.4221667"
+    },
+    {
+        "title": "Mescid-i İcâbe (مسجد الإجابة)",
+        "longitude": "39.8382255",
+        "latitude": "21.4421366"
+    },
+    {
+        "title": "Makam-ı İbrahim",
+        "longitude": "39.8263279",
+        "latitude": "21.4225897"
+    },
+    {
+        "title": "Cin Mescidi",
+        "longitude": "39.8289381",
+        "latitude": "21.4334258"
+    },
+    {
+        "title": "Mescid-i Hayf (مسجد الخيف)",
+        "longitude": "39.8781636",
+        "latitude": "21.4151059"
+    },
+    {
+        "title": "Akabe Mescidi (مسجد البيعة)",
+        "longitude": "39.8674858",
+        "latitude": "21.424687"
+    },
+    {
+        "title": "Hz. Ömer'in Evi",
+        "longitude": "39.8216667",
+        "latitude": "21.4202778"
+    },
+    {
+        "title": "Fetih Kapısı (باب الفتح)",
+        "longitude": "39.8263889",
+        "latitude": "21.4238889"
+    },
+    {
+        "title": "Kral Abdullah Girişi",
+        "longitude": "39.8238889",
+        "latitude": "21.425"
+    },
+    {
+        "title": "Zemzem",
+        "longitude": "39.8265271",
+        "latitude": "21.4225687"
+    },
+    {
+        "title": "İbn Abbas'ın Meclisi",
+        "longitude": "39.82655368",
+        "latitude": "21.42248326"
+    },
+    {
+        "title": "Sebir Dağı (جبل ثبير)",
+        "longitude": "39.871375",
+        "latitude": "21.4375073"
+    },
+    {
+        "title": "غار حراء جبل النور",
+        "longitude": "39.8615722",
+        "latitude": "21.4562961"
+    },
+    {
+        "title": "Sebir Dağı (جبل ثبير غيناء )",
+        "longitude": "39.8825383",
+        "latitude": "21.45250905"
+    },
+    {
+        "title": "سد خالد بن عبد الله القسري",
+        "longitude": "39.86054227",
+        "latitude": "21.44153646"
+    },
+    {
+        "title": "Cüreyc Ailesinin Evleri",
+        "longitude": "39.86136817",
+        "latitude": "21.45503456"
+    },
+    {
+        "title": "الثقبة",
+        "longitude": "39.86335591",
+        "latitude": "21.44973381"
+    },
+    {
+        "title": "Şeybe b. Osman'ın Evi",
+        "longitude": "39.826466",
+        "latitude": "21.4230736"
+    },
+    {
+        "title": "Hz. Abbas'ın Evi (1)",
+        "longitude": "39.82812403",
+        "latitude": "21.42284403"
+    },
+    {
+        "title": "Ya'lâ b. Ümeyye'nin Evi",
+        "longitude": "39.82705431",
+        "latitude": "21.42379645"
+    },
+    {
+        "title": "Nâfi' b. Abdülharis'in Evi",
+        "longitude": "39.82653295",
+        "latitude": "21.42477873"
+    },
+    {
+        "title": "Hz. Abbas'ın Evi (2)",
+        "longitude": "39.82965831",
+        "latitude": "21.42536826"
+    },
+    {
+        "title": "Ümmü Hani'nin Evi",
+        "longitude": "39.82639534",
+        "latitude": "21.42224306"
+    },
+    {
+        "title": "Acul Kuyusu (بئر العجول)",
+        "longitude": "39.82648467",
+        "latitude": "21.42231405"
+    },
+    {
+        "title": "Hayyatîn (Hanâtin)",
+        "longitude": "39.82604097",
+        "latitude": "21.42179504"
+    },
+    {
+        "title": "Hazvere Çarşısı (الحزورة)",
+        "longitude": "39.82521151",
+        "latitude": "21.42096621"
+    },
+    {
+        "title": "Hakem b. el-As'ın Evi",
+        "longitude": "39.82778547",
+        "latitude": "21.42421803"
+    },
+    {
+        "title": "Eban b. Osman b. Affan'ın Evi",
+        "longitude": "39.8333333",
+        "latitude": "21.4333333"
+    },
+    {
+        "title": "Amr b. Osman'ın Evi",
+        "longitude": "39.83108536",
+        "latitude": "21.43271887"
+    },
+    {
+        "title": "Hz. Osman'ın Evi",
+        "longitude": "39.82838278",
+        "latitude": "21.42483576"
+    },
+    {
+        "title": "Mescid-i Feth ( مسجد الراية / خارج مكة )",
+        "longitude": "39.8291795",
+        "latitude": "21.4315559"
+    },
+    {
+        "title": "Mescid-i Feth (مسجد الراية / المدعى)",
+        "longitude": "39.82967732",
+        "latitude": "21.42703504"
+    },
+    {
+        "title": "Mescid-i Raye ez- Zübeyr (مسجد الراية الزبير)",
+        "longitude": "39.83002549",
+        "latitude": "21.43023411"
+    },
+    {
+        "title": "Mescid-i Fatiha",
+        "longitude": "39.8291917",
+        "latitude": "21.42779013"
+    },
+    {
+        "title": "Attab b. Esid'in Evi",
+        "longitude": "39.83060748",
+        "latitude": "21.42680032"
+    },
+    {
+        "title": "Redm-i Ala (ردم عمر)",
+        "longitude": "39.83028306",
+        "latitude": "21.42738373"
+    },
+    {
+        "title": "Abdullah b. Halid b. Esid'in Evi (Halid b. Esid'in Evi)",
+        "longitude": "39.82940321",
+        "latitude": "21.42806745"
+    },
+    {
+        "title": "İbn Cüreyc'in Evi (دار البيضاء)",
+        "longitude": "39.82869263",
+        "latitude": "21.4270156"
+    },
+    {
+        "title": "Ebu Süfyan'ın Evi (geçici)",
+        "longitude": "39.82801648",
+        "latitude": "21.42568519"
+    },
+    {
+        "title": "Beyne'd-dareyn (بين الدارين)",
+        "longitude": "39.82923929",
+        "latitude": "21.42456666"
+    },
+    {
+        "title": "Benî Haşim Vadisi",
+        "longitude": "39.8307211",
+        "latitude": "21.42322993"
+    },
+    {
+        "title": "Ecyad-ı Kebir",
+        "longitude": "39.83077725",
+        "latitude": "21.41780865"
+    },
+    {
+        "title": "Ecyad-ı Sagir",
+        "longitude": "39.83077725",
+        "latitude": "21.41780865"
+    },
+    {
+        "title": "Süfyan b. Uyeyne'nin Evi",
+        "longitude": "39.82979765",
+        "latitude": "21.41281024"
+    },
+    {
+        "title": "Ensab el-Esed Dağı (Ecyadları Ayıran Dağ)",
+        "longitude": "39.8297896",
+        "latitude": "21.41963569"
+    },
+    {
+        "title": "Daru'l Uluc (Atâ b. Ebû Rebâh'ın da doğduğu ev)",
+        "longitude": "39.82806569",
+        "latitude": "21.41913039"
+    },
+    {
+        "title": "Utbe b. Rebia'nın Evi",
+        "longitude": "39.82981324",
+        "latitude": "21.4151603"
+    },
+    {
+        "title": "Ömer Dağı",
+        "longitude": "39.8141675",
+        "latitude": "21.42436228"
+    },
+    {
+        "title": "Kuaykıan Dağları",
+        "longitude": "39.82351737",
+        "latitude": "21.4272279"
+    },
+    {
+        "title": "Deylemi Dağı ve diğerleri",
+        "longitude": "39.82818318",
+        "latitude": "21.42613066"
+    },
+    {
+        "title": "Kuaykıan Vadisi",
+        "longitude": "39.82663259",
+        "latitude": "21.42666234"
+    },
+    {
+        "title": "Abdullah b. Zübeyr'in evi (الدار الدنيا)",
+        "longitude": "39.82288278",
+        "latitude": "21.42671307"
+    },
+    {
+        "title": "Abdullah b. Zübeyr Geçidi (فلق ابن الزبري)",
+        "longitude": "39.82374162",
+        "latitude": "21.42622857"
+    },
+    {
+        "title": "İbn Cüreyc Sütunu (اسطوانة ابن جريج)",
+        "longitude": "39.82586792",
+        "latitude": "21.42294399"
+    },
+    {
+        "title": "Daru'l İmare (Hârûnürreşid için yapılan)",
+        "longitude": "39.82657521",
+        "latitude": "21.42447873"
+    },
+    {
+        "title": "Kussasın Mekanı",
+        "longitude": "39.82631165",
+        "latitude": "21.42251335"
+    },
+
+  {
+    "title": "Amr b. As Camii (مسجد عمر بن العاص)",
+    "longitude": "31.23369952",
+    "latitude": "30.00998387"
+  },
+  {
+    "title": "Ukbe b. Âmir Camii ve Kabri",
+    "longitude": "31.2607027",
+    "latitude": "30.004366"
+  },
+  {
+    "title": "Bayblon Fortress",
+    "longitude": "31.23290555",
+    "latitude": "30.0049785"
+  },
+  {
+    "title": "Amr b. As'ın Evi",
+    "longitude": "31.23353299",
+    "latitude": "30.00969661"
+  },
+  {
+    "title": "Souq al-Wardan (سوق الوردان)",
+    "longitude": "31.23197071",
+    "latitude": "30.01244607"
+  },
+  {
+    "title": "Daru'l İmare (دار الإمارة)",
+    "longitude": "31.23223655",
+    "latitude": "30.00840209"
+  },
+  {
+    "title": "al-Askar Mosque",
+    "longitude": "31.24207157",
+    "latitude": "30.01860264"
+  },
+  {
+    "title": "Kanadil Sokağı (زقاق القناديل)",
+    "longitude": "31.23515567",
+    "latitude": "30.01069052"
+  },
+  {
+    "title": "Hamam",
+    "longitude": "31.23253088",
+    "latitude": "30.01107687"
+  },
+  {
+    "title": "Bimaristan",
+    "longitude": "31.23496195",
+    "latitude": "30.01093299"
+  },
+  {
+    "title": "ed-Daru'l-Müzehheb (الدار المذهبة)",
+    "longitude": "31.23411783",
+    "latitude": "30.01080663"
+  },
+  {
+    "title": "Suq al-Qanadil (سوق القناديل)",
+    "longitude": "31.23432844",
+    "latitude": "30.01026853"
+  },
+  {
+    "title": "Suq al-Barir (سوق البرير)",
+    "longitude": "31.23432419",
+    "latitude": "30.01026887"
+  },
+  {
+    "title": "St Sergius and St Bacchus Church",
+    "longitude": "31.2306747",
+    "latitude": "30.006279"
+  },
+  {
+    "title": "The Hanging Church",
+    "longitude": "31.2301826",
+    "latitude": "30.0052663"
+  },
+  {
+    "title": "Saint Barbara Church Complex",
+    "longitude": "31.231334",
+    "latitude": "30.0060835"
+  },
+  {
+    "title": "Church of Saint Menas (Cairo)",
+    "longitude": "31.2317589",
+    "latitude": "30.0063221"
+  },
+  {
+    "title": "Sınaatu's-Sufun (صناعة السفن)",
+    "longitude": "31.22453783",
+    "latitude": "30.00694582"
+  },
+  {
+    "title": "Büyük Kufe Camii (مسجد الكوفة المعظم)",
+    "longitude": "44.4007183",
+    "latitude": "32.0290954"
+  },
+  {
+    "title": "Kasru'l-İmare (قصر الإمارة)",
+    "longitude": "44.40096506",
+    "latitude": "32.02987903"
+  },
+  {
+    "title": "Bâbu'r-rahme",
+    "longitude": "44.40148375",
+    "latitude": "32.02914766"
+  },
+  {
+    "title": "Bâbü'l-hücce",
+    "longitude": "44.40007903",
+    "latitude": "32.02916875"
+  },
+  {
+    "title": "Kunase (كناسة)",
+    "longitude": "44.40134826",
+    "latitude": "32.02977774"
+  },
+  {
+    "title": "Kasru'l-İmare",
+    "longitude": "44.40111494",
+    "latitude": "32.02795118"
+  },
+  {
+    "title": "Kufe Cuma Mescidi",
+    "longitude": "44.39967667",
+    "latitude": "32.02883187"
+  },
+  {
+    "title": "Rahbe (الرحبة)",
+    "longitude": "44.40143862",
+    "latitude": "32.02988893"
+  },
+  {
+    "title": "Cedile, Becile, Kinane, Ezd",
+    "longitude": "44.39322252",
+    "latitude": "32.02888434"
+  },
+  {
+    "title": "Kays, Muharib, Hamra",
+    "longitude": "44.40692453",
+    "latitude": "32.02717351"
+  },
+  {
+    "title": "Cuheyne, Esed, Temim, Dabba, Abs",
+    "longitude": "44.39307167",
+    "latitude": "32.0237802"
+  },
+  {
+    "title": "Mezhic, Kinde, Ezd Kabilesi",
+    "longitude": "44.38922363",
+    "latitude": "32.02295389"
+  },
+  {
+    "title": "Ensar, Rebia",
+    "longitude": "44.39912647",
+    "latitude": "32.02008845"
+  },
+  {
+    "title": "Kays, Muzeyne, Barik",
+    "longitude": "44.4215911",
+    "latitude": "32.02744708"
+  },
+  {
+    "title": "Becile, Has'am, Hemdan, Sakif, Suleym",
+    "longitude": "44.38849564",
+    "latitude": "32.03562336"
+  },
+  {
+    "title": "Tayy, Abdulkays",
+    "longitude": "44.38851472",
+    "latitude": "32.03561865"
+  },
+  {
+    "title": "Hz. Ali'nin Evi (دار علي بن أبي طالب)",
+    "longitude": "44.39973784",
+    "latitude": "32.02748867"
+  },
+  {
+    "title": "Al-Hira",
+    "longitude": "44.4835889",
+    "latitude": "31.8913821"
+  },
+  {
+    "title": "Babylon",
+    "longitude": "44.421435",
+    "latitude": "32.542199"
+  },
+  {
+    "title": "Beni Kahil Mescidi (مسجد بني كاهل)",
+    "longitude": "44.3931244",
+    "latitude": "32.02287135"
+  },
+  {
+    "title": "Mesruk b. Ecdâ'nın Evi (دار مسروق بن الأجدع)",
+    "longitude": "44.40128449",
+    "latitude": "32.02646275"
+  },
+  {
+    "title": "Hâris el-A‘ver (دار حارث الأعور)",
+    "longitude": "44.40128449",
+    "latitude": "32.02646275"
+  },
+  {
+    "title": "Ebu İshak es-Sebii'nin Evi (دار أبو إسحاق السبيعي)",
+    "longitude": "44.4012984",
+    "latitude": "32.03273362"
+  },
+  {
+    "title": "Şa'bî'nin Evi (دار الشعبي)",
+    "longitude": "44.4012984",
+    "latitude": "32.03273362"
+  },
+  {
+    "title": "İsrail b. Yunus es-Sebîî'nin Evi (دار إسرائيل بن يونس السبيعي)",
+    "longitude": "44.4012984",
+    "latitude": "32.03273362"
+  },
+  {
+    "title": "Zekeriyya b. Ebî Zâide'nin Evi",
+    "longitude": "44.4012984",
+    "latitude": "32.03273362"
+  },
+  {
+    "title": "Alkame b. Kays'ın Evi (دار علقمة بن قيس)",
+    "longitude": "44.39871501",
+    "latitude": "32.02618448"
+  },
+  {
+    "title": "Esved b. Yezid'in Evi (دار الأسود بن يزيد)",
+    "longitude": "44.38924118",
+    "latitude": "32.02295968"
+  },
+  {
+    "title": "Şakîk b. Seleme'nin Evi (دار شقيق بن سلمة)",
+    "longitude": "44.39685622",
+    "latitude": "32.02404375"
+  },
+  {
+    "title": "İbrahim en-Nehâî'nin Evi (دار النخعي)",
+    "longitude": "44.39530946",
+    "latitude": "32.02146513"
+  },
+  {
+    "title": "Hakem b. Uteybe'nin Evi (دار الحكم بن عتيبة)",
+    "longitude": "44.39676237",
+    "latitude": "32.02301785"
+  },
+  {
+    "title": "İbnü'l-Mutemir'in Evi (دار ابن المعتمر)",
+    "longitude": "44.40280985",
+    "latitude": "32.03378076"
+  },
+  {
+    "title": "Ameş'in evi (دار الأعمش)",
+    "longitude": "44.39363836",
+    "latitude": "32.02308068"
+  },
+  {
+    "title": "Süfyan es-Sevrî'nin Evi (دار سفيان الثوري)",
+    "longitude": "44.3908662",
+    "latitude": "32.02483712"
+  },
+  {
+    "title": "Cerir b. Abdülhamid Evi (دار جرير بن عبد الحميد)",
+    "longitude": "44.3908662",
+    "latitude": "32.02483712"
+  },
+  {
+    "title": "Hafs b. Gıyas'ın Evi (دار حفص بن غياث)",
+    "longitude": "44.39615317",
+    "latitude": "32.02378798"
+  },
+  {
+    "title": "Ebu Muaviye ed-Darir Muhammed b. Hazim'in Evi (دار أبو معاوية الضرير)",
+    "longitude": "44.39131234",
+    "latitude": "32.0248796"
+  },
+  {
+    "title": "Züheyr b. Muaviye'nin Evi (دار زهير بن معاوية)",
+    "longitude": "44.39654636",
+    "latitude": "32.02346025"
+  },
+  {
+    "title": "Şerik b. Abdullah'ın Evi (دار شريك بن عبد الله)",
+    "longitude": "44.39644233",
+    "latitude": "32.02285158"
+  },
+  {
+    "title": "Avf b. Malik'in Evi (دار عوف بن مالك)",
+    "longitude": "44.40227077",
+    "latitude": "32.03062445"
+  },
+  {
+    "title": "Veki b. Cerrah'ın Evi (دار وكي بن حراح)",
+    "longitude": "44.40586243",
+    "latitude": "32.02868235"
+  },
+  {
+    "title": "Hz. Peygamber'in Kabri (el-Kubbetü'l-Hadrâ)",
+    "longitude": "39.6113781",
+    "latitude": "24.4675963"
+  },
+  {
+    "title": "Kubâ Mescidi (Mescidü Kubâ)",
+    "longitude": "39.6172886",
+    "latitude": "24.4392471"
+  },
+  {
+    "title": "Medine Çarşısı",
+    "longitude": "39.60647326",
+    "latitude": "24.46845807"
+  },
+  {
+    "title": "Ahcâru'z-zeyt (أحجار الزيت)",
+    "longitude": "39.6069444",
+    "latitude": "24.4675"
+  },
+  {
+    "title": "Cibrîl Kapısı (Bâbü'l-Cibrîl)",
+    "longitude": "39.6115628",
+    "latitude": "24.46758965"
+  },
+  {
+    "title": "Bakî' Kapısı (Bâbü'l-Bakî')",
+    "longitude": "39.6115655",
+    "latitude": "24.4674762"
+  },
+  {
+    "title": "Nisâ Kapısı (Bâbü'n-Nisâ)",
+    "longitude": "39.6115373",
+    "latitude": "24.46773975"
+  },
+  {
+    "title": "Ebû Bekir es-Sıddîk Kapısı (Bâbü Ebî Bekir es-Sıddîk)",
+    "longitude": "39.6106803",
+    "latitude": "24.46763115"
+  },
+  {
+    "title": "Sakîfetü Benî Sâide",
+    "longitude": "39.6067932",
+    "latitude": "24.4702845"
+  },
+  {
+    "title": "Cuma Mescidi (Mescidü'l-Cumua)",
+    "longitude": "39.6152884",
+    "latitude": "24.4454999"
+  },
+  {
+    "title": "Benû Kurayza Mescidi (Mescidü Benî Kurayza)",
+    "longitude": "39.6373441",
+    "latitude": "24.4455446"
+  },
+  {
+    "title": "Mescidü'l-Kıbleteyn",
+    "longitude": "39.5793008",
+    "latitude": "24.4841397"
+  },
+  {
+    "title": "Uhud Dağı",
+    "longitude": "39.6161933",
+    "latitude": "24.5115445"
+  },
+  {
+    "title": "Akîk Vadisi'nin Başlangıcı",
+    "longitude": "39.58711691",
+    "latitude": "24.54347669"
+  },
+  {
+    "title": "Akîk Vadisi'nin Sonu",
+    "longitude": "39.54800819",
+    "latitude": "24.14351839"
+  },
+  {
+    "title": "Meşrabetü Ümmi İbrahim",
+    "longitude": "39.63236",
+    "latitude": "24.4539789"
+  },
+  {
+    "title": "Âliye Bölgesi (العوالي)",
+    "longitude": "39.61058506",
+    "latitude": "24.4436261"
+  },
+  {
+    "title": "Hz. Peygamber'in Hanımlarının Hücreleri",
+    "longitude": "39.61120231",
+    "latitude": "24.46740071"
+  },
+  {
+    "title": "Hz. Ebu Bekir'in Evi (I)",
+    "longitude": "39.61114827",
+    "latitude": "24.46751507"
+  },
+  {
+    "title": "Hz. Ebu Bekir'in Evi (II)",
+    "longitude": "39.61143531",
+    "latitude": "24.4675604"
+  },
+  {
+    "title": "Hz. Osman'ın Evi",
+    "longitude": "39.61156408",
+    "latitude": "24.46745164"
+  },
+  {
+    "title": "Bâbü'r-Rahme",
+    "longitude": "39.6106723",
+    "latitude": "24.4677826"
+  },
+  {
+    "title": "Baki' Sokağı (زقاق بقيع)",
+    "longitude": "39.6114341",
+    "latitude": "24.46760749"
+  },
+  {
+    "title": "Hz. Osman'ın Evi (دار عثمان الصغرى)",
+    "longitude": "39.6115936",
+    "latitude": "24.46750218"
+  },
+  {
+    "title": "Rayta bint Ebi'l-Abbas'ın Evi",
+    "longitude": "39.61156965",
+    "latitude": "24.46760687"
+  },
+  {
+    "title": "Ashâb-ı Suffe'nin Yeri",
+    "longitude": "39.61106668",
+    "latitude": "24.46774056"
+  },
+  {
+    "title": "Hz. Ömer Ailesinin Evi (دار آل عمر)",
+    "longitude": "39.61119015",
+    "latitude": "24.46760019"
+  },
+  {
+    "title": "Hz. Hasan'ın Kabri",
+    "longitude": "39.6139312",
+    "latitude": "24.4669715"
+  },
+  {
+    "title": "Mescidü'l-Gamâme (Mescidü'l-Musallâ)",
+    "longitude": "39.6068971",
+    "latitude": "24.4657676"
+  },
+  {
+    "title": "Seniyyetü'l Veda Mescidi (مسجد بني خدارة او مسجد ثنية الوداع الشمالية سابقا)",
+    "longitude": "39.606082",
+    "latitude": "24.4759379"
+  },
+  {
+    "title": "Kasru Urve (قصر عروة)",
+    "longitude": "39.5817",
+    "latitude": "24.4504528"
+  },
+  {
+    "title": "Sela' (Sel') Dağı",
+    "longitude": "39.599444",
+    "latitude": "24.47499955"
+  },
+  {
+    "title": "Hendek Savaşı Meydanı",
+    "longitude": "39.5954291",
+    "latitude": "24.476863"
+  },
+  {
+    "title": "Medine İç Suru (السور الداخلي)",
+    "longitude": "39.60731435",
+    "latitude": "24.46952753"
+  },
+  {
+    "title": "Medine Dış Suru (السور الخارجي)",
+    "longitude": "39.60666885",
+    "latitude": "24.4701508"
+  },
+  {
+    "title": "Babu'l-Mısrî (باب المصري)",
+    "longitude": "39.60795879",
+    "latitude": "24.46722115"
+  },
+  {
+    "title": "Bâbü'l-Kâsımiyye",
+    "longitude": "39.60892451",
+    "latitude": "24.46598047"
+  },
+  {
+    "title": "Mustendir Dağı (جبل مستندر)",
+    "longitude": "39.6052778",
+    "latitude": "24.4761111"
+  },
+  {
+    "title": "Mâlik b. Enes'in Kabri",
+    "longitude": "39.6138889",
+    "latitude": "24.4672222"
+  },
+  {
+    "title": "Tevbe Sütunu (اسطوانة التوبة)",
+    "longitude": "39.6110791",
+    "latitude": "24.46764362"
+  },
+  {
+    "title": "Akik Vadisi",
+    "longitude": "39.54081263",
+    "latitude": "24.37312557"
+  },
+  {
+    "title": "Rûme Kuyusu (بئر رومة)",
+    "longitude": "39.5775",
+    "latitude": "24.4927778"
+  },
+  {
+    "title": "Mâlik b. Enes'in Evi",
+    "longitude": "39.58414756",
+    "latitude": "24.49867263"
+  },
+  {
+    "title": "Benî Zurayk Mescidi (مسجد بني زريق)",
+    "longitude": "39.60853223",
+    "latitude": "24.46634915"
+  },
+  {
+    "title": "Küttab-ı Urve (كتاب عروة)",
+    "longitude": "39.60877753",
+    "latitude": "24.46621726"
+  },
+  {
+    "title": "Ammar b. Yâsir'in Evi (دار عمار بن ياسر)",
+    "longitude": "39.60896802",
+    "latitude": "24.46623557"
+  },
+  {
+    "title": "Ebu Hureyre'nin Evi (دار أبو هريرة)",
+    "longitude": "39.60879272",
+    "latitude": "24.46646562"
+  },
+  {
+    "title": "ِAbdurrahman b. el-Hâris b. Hişâm'ın Evi (دار عبد الرحمن بن الحارث بن هشام)",
+    "longitude": "39.60907235",
+    "latitude": "24.46570872"
+  },
+  {
+    "title": "Malik b. Sinan Mescidi (مسجد مالك بن سنان)",
+    "longitude": "39.6076791",
+    "latitude": "24.46783415"
+  },
+  {
+    "title": "Nafi'nin Evi (دار نافع مولا ابن عمر)",
+    "longitude": "39.62071479",
+    "latitude": "24.45996325"
+  },
+  {
+    "title": "Zührî'nin Evi (دار الزهري)",
+    "longitude": "39.60583813",
+    "latitude": "24.48331261"
+  },
+  {
+    "title": "İbn Ebû Zi'b'in Evi ( دار ابن أبي ذئب )",
+    "longitude": "39.59252474",
+    "latitude": "24.49034687"
+  },
+
+  {
+    "title": "Emeviyye Camii (جامع بني أمية الكبير)",
+    "longitude": "36.3066528",
+    "latitude": "33.5116912"
+  },
+  {
+    "title": "Kasrü’l-hayri’ş-şarkī (قصر الحير الشرقي)",
+    "longitude": "39.0721628",
+    "latitude": "35.0735702"
+  },
+  {
+    "title": "Kasrü’l-hayri’l-garbî (قصر الحير الغربي)",
+    "longitude": "37.6058333",
+    "latitude": "34.3744444"
+  },
+  {
+    "title": "Bab-ı Şarkî (باب شرقي)",
+    "longitude": "36.3178555",
+    "latitude": "33.509444"
+  },
+  {
+    "title": "Babu's-Sağîr (باب الصغير)",
+    "longitude": "36.3066667",
+    "latitude": "33.5063889"
+  },
+  {
+    "title": "Bab-ı Tomas (بَابُ تُومَا)",
+    "longitude": "36.315",
+    "latitude": "33.5111111"
+  },
+  {
+    "title": "Babu'l-Câbiye (بَابُ الْجَابِيَّةِ)",
+    "longitude": "36.3016667",
+    "latitude": "33.508125"
+  },
+  {
+    "title": "Bab-ı Kisan (بَابُ كِيسَانَ)",
+    "longitude": "36.3152778",
+    "latitude": "33.5063889"
+  },
+  {
+    "title": "Babu's-Selâm (بَابُ السَّلَامِ‎)",
+    "longitude": "36.3102388",
+    "latitude": "33.5141714"
+  },
+  {
+    "title": "Babu'l-Faradis (بَابُ الْفَرَادِيسِ‎)",
+    "longitude": "36.3066667",
+    "latitude": "33.5138889"
+  },
+  {
+    "title": "Kasru'l Hadra (قصر الخضراء)",
+    "longitude": "36.306223",
+    "latitude": "33.51085173"
+  },
+  {
+    "title": "Daru'l İmare (دار الإمارة)",
+    "longitude": "36.30705405",
+    "latitude": "33.51045709"
+  },
+  {
+    "title": "Kasru'l Haccac (قصر الحجاج)",
+    "longitude": "36.30105588",
+    "latitude": "33.5066761"
+  },
+  {
+    "title": "Çarşı (سوق الأحد)",
+    "longitude": "36.3105556",
+    "latitude": "33.5116667"
+  },
+  {
+    "title": "Evzâî'nin Evi (دار الأوزاعي)",
+    "longitude": "36.3024323",
+    "latitude": "33.518357"
+  },
+  {
+    "title": "Atıyye b.Kays'ın Evi (دار عطية بن قيس)",
+    "longitude": "36.31091723",
+    "latitude": "33.50676444"
+  },
+  {
+    "title": "Feradis Mezarlığı ( مقبرة الفراديس)",
+    "longitude": "36.30665115",
+    "latitude": "33.51437595"
+  },
+  {
+    "title": "Süleyman b. Musa'nın Evi (دار سليمان بن موسى)",
+    "longitude": "36.30618132",
+    "latitude": "33.51639662"
+  },
+  {
+    "title": "Barada Nehri (نهر بردى)",
+    "longitude": "36.33345267",
+    "latitude": "33.51204613"
+  },
+  {
+    "title": "Barada Nehri (Kasiyyun Dağı)",
+    "longitude": "36.26882214",
+    "latitude": "33.52200966"
+  },
+  {
+    "title": "Ziyâd b. Câriye'nin Evi (دار زياد بن حارثة)",
+    "longitude": "36.30380861",
+    "latitude": "33.51157018"
+  },
+  {
+    "title": "Meyve Bahçeleri (بستان القط)",
+    "longitude": "36.31276008",
+    "latitude": "33.5072177"
+  },
+  {
+    "title": "Jüpiter Tapınağı",
+    "longitude": "36.3052778",
+    "latitude": "33.5113889"
+  },
+  {
+    "title": "Muaviye b. Ebu Süfyan'ın Kabri",
+    "longitude": "36.3033792",
+    "latitude": "33.5037342"
+  },
+  {
+    "title": "Maghārat al-Dam (جامع ومقام الإربعين مغارة الدم)",
+    "longitude": "36.2878938",
+    "latitude": "33.5401029"
+  },
+  {
+    "title": "Rebia b. Yezid'in Evi",
+    "longitude": "36.30736239",
+    "latitude": "33.51315176"
+  },
+  {
+    "title": "Ebu'd-Derdâ'nın Evi",
+    "longitude": "36.30480759",
+    "latitude": "33.51207602"
+  },
+  {
+    "title": "Kabisa b. Züeyb'in Evi",
+    "longitude": "36.30522545",
+    "latitude": "33.51154693"
+  },
+  {
+    "title": "Babu'l Berid",
+    "longitude": "36.3052112",
+    "latitude": "33.51157303"
+  },
+  {
+    "title": "Suq Ehad (سوق الأحد)",
+    "longitude": "36.31266671",
+    "latitude": "33.5118889"
+  },
+  {
+    "title": "Vâsile b. Eska'nın Evi",
+    "longitude": "36.3061389",
+    "latitude": "33.5085278"
+  },
+  {
+    "title": "Mekhul b. Ebu Müslim'in Evi",
+    "longitude": "36.31009178",
+    "latitude": "33.51155738"
+  },
+  {
+    "title": "Hz. Yahya'nın Türbesi",
+    "longitude": "36.3070692",
+    "latitude": "33.5113421"
+  },
+  {
+    "title": "Suqu'l Kamh(Suqu'l Buzuriyye)",
+    "longitude": "36.3063611",
+    "latitude": "33.5100833"
+  },
+  {
+    "title": "Fedale b. Ubeyd'in Evi",
+    "longitude": "36.3063611",
+    "latitude": "33.5100833"
+  },
+  {
+    "title": "Beytülmal (بيت المال)",
+    "longitude": "36.30630891",
+    "latitude": "33.51157462"
+  },
+  {
+    "title": "Bab-ı Tomas Kabristanı (مقبرة باب توما)",
+    "longitude": "36.32114711",
+    "latitude": "33.5083026"
+  },
+  {
+    "title": "Hz. Hafsa'nın Kabri",
+    "longitude": "36.3040682",
+    "latitude": "33.5050252"
+  },
+  {
+    "title": "Bâbüssagīr Kabristanı",
+    "longitude": "36.30700371",
+    "latitude": "33.50406984"
+  },
+  {
+    "title": "Yezid Kanalı (قناة يزيد)",
+    "longitude": "36.29056664",
+    "latitude": "33.52526065"
+  },
+  {
+    "title": "Tora Kanalı (قناة تورا)",
+    "longitude": "36.40917781",
+    "latitude": "33.54808305"
+  },
+  {
+    "title": "Ebu Derda'nın Mescidi (ضريح أبي الدرداء)",
+    "longitude": "36.3018612",
+    "latitude": "33.512486"
+  },
+  {
+    "title": "Deyr al-Murran (دير المران)",
+    "longitude": "36.30665991",
+    "latitude": "33.51405481"
+  },
+  {
+    "title": "Hz. Hüseyin'in Başı (رؤوس الامام الحسين عليه السلام في الشام )",
+    "longitude": "36.3041839",
+    "latitude": "33.5031504"
+  },
+  {
+    "title": "Kerbela Şehitleri Makamı (مقام رؤوس الشهداء من آل البيت)",
+    "longitude": "36.3026467",
+    "latitude": "33.505291"
+  },
+
+  {
+    "title": "el-Mescidü'l-cami (المسجد الجامع)",
+    "longitude": "47.7331538",
+    "latitude": "30.3995423"
+  },
+  {
+    "title": "Talha b. Ubeydullah Kabri",
+    "longitude": "47.7397222",
+    "latitude": "30.3986111"
+  },
+  {
+    "title": "Zübeyr b. Avvam'ın Kabri",
+    "longitude": "47.7054101",
+    "latitude": "30.3889547"
+  },
+  {
+    "title": "Hasan el-Basri'nin Kabri",
+    "longitude": "47.698777",
+    "latitude": "30.3841349"
+  },
+  {
+    "title": "İbn Sîrîn'in Kabri",
+    "longitude": "47.69882586",
+    "latitude": "30.38368675"
+  },
+  {
+    "title": "Übülle Kanalı (?)",
+    "longitude": "47.79119033",
+    "latitude": "30.49560148"
+  },
+  {
+    "title": "Ma'kıl Kanalı (?)",
+    "longitude": "47.78748955",
+    "latitude": "30.49597684"
+  },
+  {
+    "title": "İbn Ömer Nehri & Feyd el-Basra",
+    "longitude": "47.79388159",
+    "latitude": "30.37473604"
+  },
+  {
+    "title": "Enes b. Malik'in Kasrı&Kabri",
+    "longitude": "47.6340677",
+    "latitude": "30.4771832"
+  },
+  {
+    "title": "Mirbed",
+    "longitude": "47.70505339",
+    "latitude": "30.38910027"
+  },
+  {
+    "title": "Eski Basra Mezarlığı (مقبرة الحسن البصري رحمه الله)",
+    "longitude": "47.69861948",
+    "latitude": "30.38274981"
+  },
+  {
+    "title": "Basra Surları (1)",
+    "longitude": "47.69523506",
+    "latitude": "30.3846289"
+  },
+  {
+    "title": "Basra Surları (2)",
+    "longitude": "47.73424426",
+    "latitude": "30.38378565"
+  },
+  {
+    "title": "Basra Surları (3)",
+    "longitude": "47.7273462",
+    "latitude": "30.37953904"
+  },
+  {
+    "title": "Ezd Kabilesi",
+    "longitude": "47.72207854",
+    "latitude": "30.40197629"
+  },
+  {
+    "title": "Temim Kabilesi",
+    "longitude": "47.72869884",
+    "latitude": "30.3738365"
+  },
+  {
+    "title": "Bekir b. Vail Kabilesi",
+    "longitude": "47.70490401",
+    "latitude": "30.39170941"
+  },
+  {
+    "title": "Ubeydullah b. Ziyad'ın Kasrı",
+    "longitude": "47.71105375",
+    "latitude": "30.40654009"
+  },
+  {
+    "title": "Zaviye (الزاوية)",
+    "longitude": "47.66718146",
+    "latitude": "30.40975786"
+  },
+  {
+    "title": "Istefanus Sokağı (سكة اصتفانوس)",
+    "longitude": "47.72397361",
+    "latitude": "30.40209043"
+  },
+  {
+    "title": "Huraybe (الخريبة)",
+    "longitude": "47.68731508",
+    "latitude": "30.40105631"
+  },
+  {
+    "title": "Huraybe (الخريبة)",
+    "longitude": "47.69703507",
+    "latitude": "30.40688175"
+  },
+  {
+    "title": "Katade b. Diame'nin Evi (دار قتادة)",
+    "longitude": "47.7342147",
+    "latitude": "30.39920859"
+  },
+  {
+    "title": "Mescid Beni Sedus (مسجد بني سدوس)",
+    "longitude": "47.73593775",
+    "latitude": "30.40106155"
+  },
+  {
+    "title": "Sabit el-Bünanî'nin Evi (دار ثابت البناني)",
+    "longitude": "47.73647831",
+    "latitude": "30.40203855"
+  },
+  {
+    "title": "Eyyub es-Sahtiyânî'nin Evi",
+    "longitude": "47.73327989",
+    "latitude": "30.40212091"
+  },
+  {
+    "title": "Hişam b. Hassan'ın Evi (هشام بن جسان)",
+    "longitude": "47.73083274",
+    "latitude": "30.38130042"
+  },
+  {
+    "title": "Abdullah b. Avn'ın Evi (دار عبد الله بن عون)",
+    "longitude": "47.7181163",
+    "latitude": "30.40096654"
+  },
+  {
+    "title": "Hemmam b. Yahya''nın Evi  (دلر همام بن يحيى)",
+    "longitude": "47.73365689",
+    "latitude": "30.38858011"
+  },
+  {
+    "title": "Nasr b. Ali'nin evi (دار نصر بن على)",
+    "longitude": "47.73175943",
+    "latitude": "30.38501687"
+  },
+  {
+    "title": "Müsedded b. Müserhed'in Evi (دار مسدد بن مسرحد)",
+    "longitude": "47.73175943",
+    "latitude": "30.38501687"
+  },
+  {
+    "title": "Vehb b. Cerir'in evi (دار وهب بن جرير)",
+    "longitude": "47.73175943",
+    "latitude": "30.38501687"
+  },
+  {
+    "title": "Süleyman b. Harb'in Evi (دار سليمان بن حرب)",
+    "longitude": "47.73287172",
+    "latitude": "30.38384713"
+  },
+  {
+    "title": "Sûk el-Dakik (Un Pazarı)",
+    "longitude": "47.73269107",
+    "latitude": "30.40025736"
+  },
+  {
+    "title": "Medinetu'r rızk (مدينة الرزق)",
+    "longitude": "47.70493566",
+    "latitude": "30.46446748"
+  },
+  {
+    "title": "Sûk el-Dakîk (Un pazarı)",
+    "longitude": "47.73777142",
+    "latitude": "30.42100063"
+  },
+  {
+    "title": "Sûk el-Allafin (Yem Satıcıları Pazarı)",
+    "longitude": "47.72037589",
+    "latitude": "30.4102256"
+  },
+  {
+    "title": "Sûk el-Hallalin (Turşucular Pazarı)",
+    "longitude": "47.72022121",
+    "latitude": "30.41014713"
+  },
+  {
+    "title": "Sûk el-Kassâbîn",
+    "longitude": "47.72022122",
+    "latitude": "30.41014713"
+  },
+  {
+    "title": "Sûk el-Kadîm",
+    "longitude": "47.72776259",
+    "latitude": "30.40629603"
+  },
+  {
+    "title": "Sûk el-Câmi & Sûk Osman",
+    "longitude": "47.72776259",
+    "latitude": "30.40629603"
+  },
+  {
+    "title": "Sûku'ş-Şeârin (İp eğirenler Pazarı)",
+    "longitude": "47.72776259",
+    "latitude": "30.40629603"
+  },
+  {
+    "title": "Mirbed Çarşısı",
+    "longitude": "47.69095339",
+    "latitude": "30.39384767"
+  },
+  {
+    "title": "Yahya b. Said el-Kattan'ın Evi (يحيى بن سعيد القطان)",
+    "longitude": "47.71688294",
+    "latitude": "30.3969113"
+  },
+  {
+    "title": "Yahya b. Said el-Kattan Mescidi",
+    "longitude": "47.71499449",
+    "latitude": "30.38518272"
+  },
+  {
+    "title": "Hâlid el-Hazza'nin evi (دار خالد الحذاء)",
+    "longitude": "47.72358822",
+    "latitude": "30.39514484"
+  }
+  ];
+
+  for (var i = 0; i < cities.length; i++) {
+    var city = cities[i];
+    addCity(city.longitude, city.latitude, city.title);
+  }
+  
+  function addCity(longitude, latitude, title) {
+    pointSeries.data.push({
+      geometry: { type: "Point", coordinates: [longitude, latitude] },
+      title: title
+    });
+  }
+  
+  // Make stuff animate on load
+  chart.appear(1000, 100);
+  
+  }); // end am5.ready()
+ 
+  </script>
+  
+  <!-- HTML -->
+  <div id="chartdiv"></div>
+  </main>
+
+  <footer class="mt-auto">
+    <p>© 2024 All right reserved.</p>
+  </footer>
+</div>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
